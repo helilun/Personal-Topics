@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genial House 專屬訂製</title>
+    <link rel="stylesheet" href="Reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #F3F5F2;
+            width: 1200px;
+            font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            overflow-x:hidden;
+        }
+        img{
+            vertical-align: middle;
+        }
+        header {
+            height: 85px;
+            width: 1200px;
+            background-color: #EDF0E7;
+            position: sticky;
+            top:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            border-bottom: 1px solid #90A183;
+        }
+        .header-group {
+            width: 1200px;
+            height: 85px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header-logo {
+            width: 387.46px;
+            margin-right: 120px;
+        }
+        .header-list a {
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            font-weight: 300;
+            margin: 0px 15px;
+            letter-spacing: 2.4px;
+            vertical-align: bottom;
+        }
+        .backtotop {
+            position: fixed;
+            bottom: 5%;
+            right: 5%;
+            z-index: 10;
+        }
+        .backtotop img {
+            width:100%;
+        }
+        .breadcrumb{
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .breadcrumb li{
+            display: inline;
+            list-style: none;
+        }
+        .breadcrumb li:not(:last-child)::after{
+            content: "　/　";
+        }
+        .breadcrumb li a{
+            text-decoration: none;
+        }
+        .breadcrumb-item{
+            font-size: 18px;
+            font-weight: 300;
+        }
+        main{
+            width: 1200px;
+        }
+        h1{
+            color: rgba(120, 122, 117, 0.20);
+            font-size: 128px;
+            font-weight: 400;
+            letter-spacing: 5.12px;
+            width: 933px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            margin: auto;
+            text-shadow: 0px 0px 40px rgba(255, 193, 7, 0.5);
+        }
+        .title{
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 8px;
+            position: relative;
+            width: 184px;
+            text-align: center;
+            margin: auto;
+        }
+        .left-line{
+            position: absolute;
+            left: -120%;
+            top: 50%;
+            width: 183px;
+        }
+        .right-line{
+            position: absolute;
+            right: -120%;
+            top: 50%;
+            width: 183px;
+        }
+        .foreword{
+            text-align: center;
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            display: block;
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+        .step-group{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+        .step1,
+        .step2,
+        .step3,
+        .step4,
+        .step5{
+            width: 794px;
+            height: 300px;
+            background-color: #90A183;
+            display: flex;
+            margin-bottom: 125px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .step2,
+        .step4{
+            flex-direction: row-reverse;
+        }
+        .step5{
+            flex-direction: column;
+        }
+        .yellowarrow{
+            position: absolute;
+            left: -25%;
+            top: 60%;
+        }
+        .arrow{
+            position: absolute;
+            right: -25%;
+            top: 60%;
+            transform:scaleX(-1);
+        }
+        .txt {
+            width:480px ;
+        }
+        .step5 .txt {
+            width: 600px ;
+        }
+        .step5 .txt p:nth-child(3){
+            margin-bottom:-15px;
+        }
+        .step4 .txt {
+            width: 450px ;
+        }
+        .txt h3{
+            letter-spacing: 1px;
+            font-size: 20px;
+            font-weight: 300;
+            margin: 15px;
+            color: #F3F5F2;
+        }
+        .txt p{
+            font-size: 16px;
+            color: #F3F5F2;
+            font-weight: 300;
+            line-height: 180%;
+            letter-spacing: 1.6px;
+            margin: 15px;
+        }
+        span{
+            letter-spacing: 1.4px;
+            font-size: 28px;
+            font-weight: 400;
+        }
+        .step1 .pic img{
+            width: 151px;
+            height: 140px;
+            margin: 15px;
+        }
+        .step2 .pic img{
+            width: 183px;
+            height: 354px;
+            margin: 15px;
+        }
+        .step3 .pic img{
+            width: 183px;
+            height: 183px;
+            margin: 15px;
+        }
+        .step4 .pic img{
+            width: 285px;
+            height: 247px;
+            margin: 15px;
+        }
+        .step5 .pic img{
+            width: 350px;
+            height: 155px;
+            margin-bottom: -150px;
+        }
+        .pic img{
+            width: 100%;
+        }
+        button{
+            color: #90A183;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            border-radius: 5px;
+            border: 1px solid #90A183;
+            width: 145px;
+            height: 45px;
+            background-color: #F3F5F2 ;
+            margin-top: 35px;
+            margin-bottom: 60px;
+        }
+        button:hover{
+            background-color: #90A183;
+            color: #F3F5F2 ;
+        }
+        footer{
+            width:1200px;
+            background-color: #EDF0E7; 
+        }
+        .footer-group{
+            width:1200px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-us,
+        .footer-follow,
+        .footer-location{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            height: 140px;
+            margin-right: 50px;
+        }
+        .footer-location{
+            justify-content: center;
+        }
+        .footer-us,
+        .footer-follow{
+            margin-right: 75px; 
+        }
+        .footer-location{
+            margin-left: 75px;
+        }
+        .footer-group h5{
+            font-size: 18px;
+            font-weight: 300;            
+            margin-top: 15px;
+        }
+        .footer-us a,
+        .footer-follow a,
+        .footer-location p{
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 15px;
+            color: #000;
+        }
+        footer .logo{
+            width: 184px;
+            height: 215px;  
+        }
+        .footer-follow img{
+            width: 23px;
+            height: 23px;
+            margin-right: 5px;  
+        }
+        .followicon{
+            margin-top: 15px;
+        }
+        footer img{
+            width: 100%;  
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-group">
+            <div class="header-logo">
+                <a href="front page.html"><img src="../material/LOGO row.svg" alt=""></a>
+            </div>
+            <nav class="header-list">
+                <a href="product.html">精選單品</a>
+                <a href="customized.html">專屬訂製</a>
+                <a href="guide.html">選購指南</a>
+                <a href="inspiration.html">來點靈感</a>
+                <a href="reservation.html">與您有約</a>
+                <a href="#"><img src="../material/user.svg" alt=""></a>
+            </nav>
+        </div>
+    </header>
+    <div class="backtotop">
+        <a href="#top"><img src="../material/TOP.png" alt=""></a>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="front page.html">首頁</a></li>
+            <li class="breadcrumb-item"><a href="customized.html">專屬訂製</a></li>
+        </ol>
+    </nav>
+    <main>
+        <h1>
+            CUSTOMIZED
+        </h1>
+        <h2 class="title">
+            <img class="left-line" src="../material/align.svg" alt="">
+            專屬訂製
+            <img class="right-line" src="../material/align.svg" alt="">            
+        </h2>
+        <h3 class="foreword">
+            訂製一個自己喜歡的生活 - 讓獨一無二傢的俱滿足您對家的想像
+        </h3>
+        <article class="step-group">
+            <article class="step1">
+                <div class="txt">
+                    <h3>
+                        <span>STEP1.</span>挑選您喜歡的風格、樣式及需求
+                    </h3>
+                    <P>
+                        訂製家具前請您先尋找喜歡的居家風格與需求。例如您喜歡簡約北歐風，還是華麗新古典風？沙發是否需要加大才夠坐？如果您本身有配合的室內設計師，可以請設計師一同參與討論；或者也可以上網參考相關網站，找一些喜歡的圖片作為範例，讓雙方對焦更有效率。
+                    </P>
+                </div>
+                <div class="pic">
+                    <img src="../material/step1-decoration.png" alt="">
+                </div>
+                <div class="yellowarrow">
+                    <img src="../material/arrow.svg" alt="">
+                </div>
+            </article>
+            <article class="step2">
+                <div class="txt">
+                    <h3>
+                        <span>STEP2.</span>現場丈量，確認尺寸
+                    </h3>
+                    <P>
+                        您可以直接告知需求的規格尺寸，如果不確定喜歡的款式是否符合空間條件，Genial House也提供到府丈量服務，讓訂製家具與空間完美契合，減少畸零空間的浪費。
+                    </P>
+                </div>
+                <div class="pic">
+                    <img src="../material/step2-decoration.svg" alt="">
+                </div>
+                <div class="arrow">
+                    <img src="../material/arrow.svg" alt="">
+                </div>
+            </article>
+            <article class="step3">
+                <div class="txt">
+                    <h3>
+                        <span>STEP3.</span>模擬成品，確認報價
+                    </h3>
+                    <P>
+                        到府丈量及設計規劃後，就會提交模擬的設計圖。基本上到了這個階段，對家的想像藍圖逐步成真，建議一定要仔細確認每個細節喔！待消費者確定之後，Genial House才會進行報價。如果選了不同材質而使價格產生浮動也會事先與您說明。
+                    </P>
+                </div>
+                <div class="pic">
+                    <img src="../material/step3-decoration.svg" alt="">
+                </div>
+            </article>
+            <article class="step4">
+                <div class="txt">
+                    <h3>
+                        <span>STEP4.</span>付款完成，請師傅開始製作
+                    </h3>
+                    <P>
+                        因家具為訂製商品，將會先酌收總價50%作為訂金，收到訂金後才會開始下單與製作。
+                    </P>
+                    <P>
+                        訂製商品完整工期大約為30~45個工作天，待完成後服務人員將會主動與您聯繫約出貨時間。
+                    </P>
+                </div>
+                <div class="pic">
+                    <img src="../material/step4-decoration.svg" alt="">
+                </div>
+                <div class="yellowarrow">
+                    <img src="../material/arrow.svg" alt="">
+                </div>
+            </article>
+            <article class="step5">
+                <div class="txt">
+                    <h3>
+                        <span>STEP5.</span>安心送到家，到府安裝免擔心
+                    </h3>
+                    <P>
+                        完成後的家具成品，會由專屬物流團隊親送到您家中並協助定位，請您確認各項家具細節。
+                    </P>
+                    <P>
+                        若是製作或運送過程中產生瑕疵，Genial House都有妥善的保固服務，確保消費者權益。
+                    </P>
+                </div>
+                <div class="pic">
+                    <img src="../material/step5-decoration.svg" alt="">
+                </div>
+            </article>
+            <button>
+                立即訂製
+            </button>
+        </article>
+    </main>
+    <footer>   
+        <div class="footer-group">    
+            <div class="footer-us">
+                <h5>Genial House</h5>
+                <a href="#">關於我們</a>
+                <a href="#">最新消息</a>
+                <a href="#">購買須知</a>
+                <a href="#">常見問題</a>
+            </div>
+            <div class="footer-follow">
+                <h5>追蹤我們</h5>
+                <a href="#">訂閱電子報</a>
+                <div class="followicon">
+                    <a href="#"><img src="../material/instagram.svg" alt=""></a>
+                    <a href="#"><img src="../material/facebook.svg" alt=""></a>
+                    <a href="#"><img src="../material/youtube.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="../material/LOGO.svg" alt="">
+            </div>
+            <div class="footer-location">
+                <p class="address">
+                    地址：桃園市中壢區復興路46號9樓
+                </p>
+                <p>
+                    營業時間：09:00-22:00(採預約制)
+                </p>
+                <p>
+                    電話：03-425-1108
+                </p>
+                <p>
+                    Mail：OOXX12345@gmail.com
+                </p>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>

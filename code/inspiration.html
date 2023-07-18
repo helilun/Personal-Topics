@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genial House 來點靈感</title>
+    <link rel="stylesheet" href="Reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #F3F5F2;
+            width: 1200px;
+            font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            overflow-x:hidden;
+        }
+        img{
+            vertical-align: middle;
+        }
+        header{
+            height: 85px;
+            width: 1200px;
+            background-color: #EDF0E7;
+            position: sticky;
+            top:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            border-bottom: 1px solid #90A183;
+        }
+        .header-group {
+            width: 1200px;
+            height: 85px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header-logo {
+            width: 387.46px;
+            margin-right: 120px;
+        }
+        .header-list a {
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            font-weight: 300;
+            margin: 0px 15px;
+            letter-spacing: 2.4px;
+            vertical-align: bottom;
+        }
+        .backtotop{
+            position: fixed;
+            bottom: 5%;
+            right: 5%;
+            z-index: 10;
+        }
+        .backtotop img{
+            width:100%;
+        }
+        .breadcrumb{
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .breadcrumb li{
+            display: inline;
+            list-style: none;
+        }
+        .breadcrumb li:not(:last-child)::after{
+            content: "　/　";
+        }
+        .breadcrumb li a{
+            text-decoration: none;
+        }
+        .breadcrumb-item{
+            font-size: 18px;
+            font-weight: 300;
+        }
+        h1{
+            color: rgba(120, 122, 117, 0.20);
+            font-size: 128px;
+            font-weight: 400;
+            letter-spacing: 5.12px;
+            width: 906px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            margin: auto;
+            text-shadow: 0px 0px 40px rgba(255, 193, 7, 0.5);
+        }
+        .title{
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 8px;
+            position: relative;
+            width: 184px;
+            text-align: center;
+            margin: auto;
+        }
+        .left-line{
+            position: absolute;
+            left: -120%;
+            top: 50%;
+            width: 183px;
+        }
+        .right-line{
+            position: absolute;
+            right: -120%;
+            top: 50%;
+            width: 183px;
+        }
+        .hhh{
+            width: 630px;
+            margin: auto;
+            margin-top: 100px;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 35px;
+            letter-spacing: 2px;
+        }
+        .house{
+            width: 1200px;
+            margin: 100px  0px;
+        }
+        .house img{
+            width: 100%;            
+        }
+        .share{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 35px;
+        }
+        .share-lin .pic,
+        .share-kuo .pic{
+            width: 500px;
+            height: 450px;
+        }
+        .share-lin,
+        .share-kuo{
+            position: relative;
+            margin: 70px 0px 80px;
+        }
+        .share-lin{
+            margin-right: 140px;
+        }
+        .share img{
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+        h4{
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+        .txt{
+            width: 200px;
+            height: 180px;
+            border-radius: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: -15%;
+            bottom: -18%;
+        }
+        .share-lin .txt{
+            background-color: rgba(144, 161, 131, 0.90);
+        }
+        .share-kuo .txt{
+            background-color: rgba(255, 193, 7, 0.80);
+        }
+        .share p{
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 1.8px;
+            line-height: 150%;
+            margin-bottom: 25px;
+        }
+        .share h3,
+        .material-group h3{
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-align: center;
+            width: 1200px;
+            margin-bottom: 35px;
+        }
+        .material-group{
+            width: 1200px;
+            display: flex;
+            flex-wrap:wrap;
+            row-gap: 30px;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 125px;
+        }
+        .material{
+            width: 200px;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        .material img{
+            width: 100%;
+            height: 100%;
+        }
+        .material p{
+            text-align: center;
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 2.5px;
+            background-color: #0008;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px;
+            color: #fff;
+            transform: translateY(100%);
+            transition: .5s;
+        }
+        .material:hover p{
+            transform: translateY(0%);            
+        }
+        footer{
+            width:1200px;
+            background-color: #EDF0E7; 
+        }
+        .footer-group{
+            width:1200px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-us,
+        .footer-follow,
+        .footer-location{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            height: 140px;
+            margin-right: 50px;
+        }
+        .footer-location{
+            justify-content: center;
+        }
+        .footer-us,
+        .footer-follow{
+            margin-right: 75px; 
+        }
+        .footer-location{
+            margin-left: 75px;
+        }
+        .footer-group h5{
+            font-size: 18px;
+            font-weight: 300;            
+            margin-top: 15px;
+        }
+        .footer-us a,
+        .footer-follow a,
+        .footer-location p{
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 15px;
+            color: #000;
+        }
+        footer .logo{
+            width: 184px;
+            height: 215px;  
+        }
+        .footer-follow img{
+            width: 23px;
+            height: 23px;
+            margin-right: 5px;  
+        }
+        .followicon{
+            margin-top: 15px;
+        }
+        footer img{
+            width: 100%;  
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-group">
+            <div class="header-logo">
+                <a href="front page.html"><img src="../material/LOGO row.svg" alt=""></a>
+            </div>
+            <nav class="header-list">
+                <a href="product.html">精選單品</a>
+                <a href="customized.html">專屬訂製</a>
+                <a href="guide.html">選購指南</a>
+                <a href="inspiration.html">來點靈感</a>
+                <a href="reservation.html">與您有約</a>
+                <a href="#"><img src="../material/user.svg" alt=""></a>
+            </nav>
+        </div>
+    </header>
+    <div class="backtotop">
+        <a href="#top"><img src="../material/TOP.png" alt=""></a>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="front page.html">首頁</a></li>
+            <li class="breadcrumb-item"><a href="inspiration.html">來點靈感</a></li>
+        </ol>
+    </nav>
+    <main>
+        <h1>INSPIRATION</h1>
+        <h2 class="title">
+            <img class="left-line" src="../material/align.svg" alt="">
+            來點靈感
+            <img class="right-line" src="../material/align.svg" alt="">            
+        </h2>
+        <h3 class="hhh">
+            松浦彌太郎在《放下包袱的輕生活練習》中寫道：「我最大的理想，就是生活周遭所有的物品都和我享有故事性。」相信每樣家具都有一件耐人尋味的故事，深入體會並細細摸索空間中的各種關係，讓我們將家具融入生活中。
+        </h3>
+        <div class="house">
+            <img src="../material/greenhouse.svg" alt="">
+        </div>
+        <article class="share">
+            <h3>與您分享家居生活的無限可能</h3>
+            <article class="share-lin">
+                <div class="pic">
+                    <img src="../material/lin.jpg" alt="">
+                </div>
+                <div class="txt">
+                    <h4>中壢林宅</h4>
+                    <p>
+                        # 類型 | 老屋翻新<br>
+                        # 坪數 | 25坪<br>
+                        # 風格 | 北歐風<br>
+                    </p>
+                </div>
+            </article>
+            <article class="share-kuo">
+                <div class="pic">
+                    <img src="../material/kuo.jpg" alt="">
+                </div>
+                <div class="txt">
+                    <h4>萬華郭宅</h4>
+                    <p>
+                        # 類型 | 新成屋<br>
+                        # 坪數 | 42坪<br>
+                        # 風格 | 現代風<br>
+                    </p>
+                </div>                
+            </article>
+        </article>
+        <div class="house">
+            <img src="../material/yellowhouse.svg" alt="">
+        </div>
+        <article class="material-group">
+            <h3>滑滑看，說不定就找到您想要的</h3>
+            <div class="material">
+                <img src="../material/經典淺木紋.webp" alt="">
+                <p>經典淺木紋</p>
+            </div>
+            <div class="material">
+                <img src="../material/經典木紋.webp" alt="">
+                <p>經典木紋</p>
+            </div>
+            <div class="material">
+                <img src="../material/經典深木紋.webp" alt="">
+                <p>經典深木紋</p>
+            </div>
+            <div class="material">
+                <img src="../material/天然胡桃木.jpg" alt="">
+                <p>天然胡桃木</p>
+            </div>
+            <div class="material">
+                <img src="../material/北美黑胡桃.jpg" alt="">
+                <p>北美黑胡桃</p>
+            </div>
+            <div class="material">
+                <img src="../material/自然山核桃.jpg" alt="">
+                <p>自然山核桃</p>
+            </div>
+            <div class="material">
+                <img src="../material/印象淺胡桃.jpg" alt="">
+                <p>印象淺胡桃</p>
+            </div>
+            <div class="material">
+                <img src="../material/托巴克木紋.jpg" alt="">
+                <p>托巴克木紋</p>
+            </div>
+            <div class="material">
+                <img src="../material/剛果胡桃木.jpg" alt="">
+                <p>剛果胡桃木</p>
+            </div>
+            <div class="material">
+                <img src="../material/原切黑櫻桃.jpg" alt="">
+                <p>原切黑櫻桃</p>
+            </div>
+            <div class="material">
+                <img src="../material/復古楓木.jpg" alt="">
+                <p>復古楓木</p>
+            </div>
+            <div class="material">
+                <img src="../material/復古榆木.jpg" alt="">
+                <p>復古榆木</p>
+            </div>
+            <div class="material">
+                <img src="../material/原木拚.jpg" alt="">
+                <p>原木拚</p>
+            </div>
+            <div class="material">
+                <img src="../material/大荔枝象牙色.jpg" alt="">
+                <p>大荔枝象牙色</p>
+            </div>
+            <div class="material">
+                <img src="../material/大荔枝駱駝色.jpg" alt="">
+                <p>大荔枝駱駝色</p>
+            </div>
+            <div class="material">
+                <img src="../material/大荔枝天空藍.jpg" alt="">
+                <p>大荔枝天空藍</p>
+            </div>
+            <div class="material">
+                <img src="../material/大荔枝茶色.jpg" alt="">
+                <p>大荔枝茶色</p>
+            </div> 
+            <div class="material">
+                <img src="../material/牛皮灰.jpg" alt="">
+                <p>牛皮灰</p>
+            </div>
+            <div class="material">
+                <img src="../material/牛皮淺棕.jpg" alt="">
+                <p>牛皮淺棕</p>
+            </div>
+            <div class="material">
+                <img src="../material/牛皮棕.jpg" alt="">
+                <p>牛皮棕</p>
+            </div> 
+            <div class="material">
+                <img src="../material/牛皮黑.jpg" alt="">
+                <p>牛皮黑</p>
+            </div>
+            <div class="material">
+                <img src="../material/牧羊人灰藍.jpg" alt="">
+                <p>牧羊人灰藍</p>
+            </div>
+            <div class="material">
+                <img src="../material/牧羊人米白.jpg" alt="">
+                <p>牧羊人米白</p>
+            </div> 
+            <div class="material">
+                <img src="../material/牧羊人紅棕.jpg" alt="">
+                <p>牧羊人紅棕</p>
+            </div>
+            <div class="material">
+                <img src="../material/牧羊人胡桃.jpg" alt="">
+                <p>牧羊人胡桃</p>
+            </div>
+            <div class="material">
+                <img src="../material/南瓜色水泥紋.jpg" alt="">
+                <p>南瓜色水泥紋</p>
+            </div> 
+            <div class="material">
+                <img src="../material/大象灰水泥紋.jpg" alt="">
+                <p>大象灰水泥紋</p>
+            </div>
+            <div class="material">
+                <img src="../material/深酒紅水泥紋.jpg" alt="">
+                <p>深酒紅水泥紋</p>
+            </div>
+            <div class="material">
+                <img src="../material/深邃綠水泥紋.jpg" alt="">
+                <p>深邃綠水泥紋</p>
+            </div> 
+            <div class="material">
+                <img src="../material/復古棕水泥紋.jpg" alt="">
+                <p>復古棕水泥紋</p>
+            </div>
+            <div class="material">
+                <img src="../material/殘系白.jpg" alt="">
+                <p>殘系白</p>
+            </div>
+            <div class="material">
+                <img src="../material/殘系純白.jpg" alt="">
+                <p>殘系純白</p>
+            </div>
+            <div class="material">
+                <img src="../material/殘系米咖.jpg" alt="">
+                <p>殘系米咖</p>
+            </div> 
+            <div class="material">
+                <img src="../material/殘系灰白棕.jpg" alt="">
+                <p>殘系灰白棕</p>
+            </div> 
+            <div class="material">
+                <img src="../material/法式灰平紋.jpg" alt="">
+                <p>法式灰平紋</p>
+            </div>
+            <div class="material">
+                <img src="../material/經典太陽平紋.jpg" alt="">
+                <p>經典太陽平紋</p>
+            </div>  
+            <div class="material">
+                <img src="../material/經典奶黃平紋.jpg" alt="">
+                <p>經典奶黃平紋</p>
+            </div>  
+            <div class="material">
+                <img src="../material/經典咖啡平紋.jpg" alt="">
+                <p>經典咖啡平紋</p>
+            </div>  
+            <div class="material">
+                <img src="../material/經典尊爵灰平紋.jpg" alt="">
+                <p>經典尊爵灰平紋</p>
+            </div>  
+            <div class="material">
+                <img src="../material/燈芯絨米白.jpg" alt="">
+                <p>燈芯絨米白</p>
+            </div>  
+            <div class="material">
+                <img src="../material/燈芯絨咖.jpg" alt="">
+                <p>燈芯絨咖</p>
+            </div>  
+            <div class="material">
+                <img src="../material/燈芯絨軍綠.jpg" alt="">
+                <p>燈芯絨軍綠</p>
+            </div>       
+            <div class="material">
+                <img src="../material/燈芯絨粉.jpg" alt="">
+                <p>燈芯絨粉</p>
+            </div>  
+            <div class="material">
+                <img src="../material/鱷魚棕.jpg" alt="">
+                <p>鱷魚棕</p>
+            </div>
+            <div class="material">
+                <img src="../material/鱷魚灰.jpg" alt="">
+                <p>鱷魚灰</p>
+            </div>
+        </article>
+    </main>
+    <footer>   
+        <div class="footer-group">    
+            <div class="footer-us">
+                <h5>Genial House</h5>
+                <a href="#">關於我們</a>
+                <a href="#">最新消息</a>
+                <a href="#">購買須知</a>
+                <a href="#">常見問題</a>
+            </div>
+            <div class="footer-follow">
+                <h5>追蹤我們</h5>
+                <a href="#">訂閱電子報</a>
+                <div class="followicon">
+                    <a href="#"><img src="../material/instagram.svg" alt=""></a>
+                    <a href="#"><img src="../material/facebook.svg" alt=""></a>
+                    <a href="#"><img src="../material/youtube.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="../material/LOGO.svg" alt="">
+            </div>
+            <div class="footer-location">
+                <p class="address">
+                    地址：桃園市中壢區復興路46號9樓
+                </p>
+                <p>
+                    營業時間：09:00-22:00(採預約制)
+                </p>
+                <p>
+                    電話：03-425-1108
+                </p>
+                <p>
+                    Mail：OOXX12345@gmail.com
+                </p>
+            </div>
+        </div>
+    </footer>      
+</body>
+</html>

@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genial House</title>
+    <link rel="stylesheet" href="Reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>        
+        body{
+            background-color: #F3F5F2;
+            font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+        .slideshow img{
+            width: 100%;
+            object-fit: cover;
+            height: 800px;
+            margin: auto;
+        }
+        img{
+            vertical-align: top;
+        }
+        header {
+            height: 85px;
+            width: 100%;
+            background-color: #EDF0E7;
+            position: sticky;
+            top:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            border-bottom: 1px solid #90A183;
+        }
+        .header-group {
+            width: 1200px;
+            height: 85px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header-logo {
+            width: 387.46px;
+            margin-right: 120px;
+        }
+        .header-list a {
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            font-weight: 300;
+            margin: 0px 15px;
+            letter-spacing: 2.4px;
+            vertical-align: bottom;
+        }
+        .backtotop {
+            position: fixed;
+            bottom: 5%;
+            right: 5%;
+            z-index: 10;
+        }
+        .backtotop img {
+            width:100%;
+        }
+        .newarrive{
+            position: relative;
+        }
+        .newarrive-content{
+            display: flex;
+            margin: 10% 10% 0px;
+         }
+        .newarrive-title{
+            border-bottom: #787A75 solid 1px;
+            width: 183px;
+            height: 40px;
+            margin-right: 122px;
+        }
+        .title{
+            text-align: center;
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 8.4px;
+            width: 183px;
+            height: 40px;
+            justify-content: center;
+        }
+        .newarrive-pic{
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+        }
+        .newarrive-pic-c103{
+            display: flex;
+            width: 488px;
+            height: 583px;
+            border-radius: 80px 0px 0px 0px;
+            border: 1px solid #90A183;
+            background-image: url("../material/dust_scratches.webp");
+            justify-content: center;
+            align-items: center;
+            box-shadow: 20px 20px 30px 0px rgba(120, 122, 117, 0.50);
+        }
+        .newarrive-pic-c103 img{
+            width: 358px;
+            height: 355px;
+        }
+        .newarrive-pic-l101{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 488px;
+            height: 583px;
+            border-radius: 0px 0px 80px 80px;
+            border: 1px solid #90A183;
+            background-image: url("../material/dust_scratches.webp");
+            box-shadow: 20px 20px 30px 0px rgba(120, 122, 117, 0.50);
+        }
+        .newarrive-pic-l101 img{
+            width: 371px;
+            height: 455px;
+        }
+        .newarrive-pic-hc101{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 488px;
+            height: 583px;
+            border-radius: 0px 80px;
+            border: 1px solid #90A183;
+            background-image: url("../material/dust_scratches.webp");
+            box-shadow: 20px 20px 30px 0px rgba(120, 122, 117, 0.50);
+        }
+        .newarrive-pic-hc101 img{
+            width: 350px;
+            height: 388.75px;
+        }
+        .newarrive-pic-dt101{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 488px;
+            height: 583px;
+            border-radius: 80px 80px 80px 0px;
+            border: 1px solid #90A183;
+            background-image: url("../material/dust_scratches.webp");
+            box-shadow: 20px 20px 30px 0px rgba(120, 122, 117, 0.50);
+        }
+        .newarrive-pic-dt101 img{
+            width: 405px;
+            height: 290px;
+        }
+        .newarrive-readmore{
+            display: flex;
+            width: 150px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            background-color: #F3F5F2;
+            border: #90A183 solid 1px;
+            border-radius: 10px;
+            position: absolute;
+            right: 10%;
+            bottom: -15%;        
+        }
+        .newarrive-readmore a{
+            display: flex;            
+            text-decoration: none;
+            color: #90A183;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        .left-decoration{
+            position: absolute;
+            top: 10%;
+            left: -10%;
+        }
+        .bestseller{
+            position: relative;
+        }        
+        .bestseller-content{
+            display: flex;
+            margin: 10% 10% 0px;
+         }
+        .bestseller-title{
+            border-bottom: #787A75 solid 1px;
+            width: 183px;
+            height: 40px;
+            margin-right: 122px;
+        }
+        .bestseller-pic{
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+        }
+        .bestseller-pic-c102-1{
+            display: flex;
+            width: 488px;
+            height: 583px;
+            border-radius: 0px 80px 80px 80px;
+            border: 1px solid #90A183;
+            background-image: url("../material/dust_scratches.webp");
+            justify-content: center;
+            align-items: center;
+            box-shadow: 20px 20px 30px 0px rgba(120, 122, 117, 0.50);
+        }
+        .bestseller-pic-c102-1 img{
+            width: 310px;
+            height: 362px;
+        }
+        .bestseller-s101-1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 488px;
+            height: 583px;
+            border-radius: 0px 80px 80px 0px;
+            border: 1px solid #90A183;
+            background-image: url("../material/dust_scratches.webp");
+            box-shadow: 20px 20px 30px 0px rgba(120, 122, 117, 0.50);
+        }
+        .bestseller-s101-1 img{
+            width: 385px;
+            height: 280px;
+        }
+        .bestseller-pic-dt102{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 488px;
+            height: 583px;
+            border-radius: 0px 80px;
+            border: 1px solid #90A183;
+            background-image: url("../material/dust_scratches.webp");
+            box-shadow: 20px 20px 30px 0px rgba(120, 122, 117, 0.50);
+        }
+        .bestseller-pic-dt102 img{
+            width: 437px;
+            height: 227px; 
+        }
+        .bestseller-pic-l102{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 488px;
+            height: 583px;
+            border-radius: 80px;
+            border: 1px solid #90A183;
+            background-image: url("../material/dust_scratches.webp");
+            box-shadow: 20px 20px 30px 0px rgba(120, 122, 117, 0.50);
+        }
+        .bestseller-pic-l102 img{
+            width: 414px;
+            height: 406px;
+        }
+        .bestseller-readmore{
+            display: flex;
+            width: 150px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            background-color: #F3F5F2;
+            border: #90A183 solid 1px;
+            border-radius: 10px;
+            position: absolute;
+            right: 10%;
+            bottom: -15%;        
+        }
+        .bestseller-readmore a{
+            display: flex;            
+            text-decoration: none;
+            color: #90A183;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        .news{
+            width: 100%;
+            height: 650px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+            flex-direction: column;
+        }
+        .news-title{
+            color: #000;
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 8.4px;
+            position: relative;
+        }
+        .left-line{
+            position: absolute;
+            left: -178%;
+            top: 50%;
+            width: 183px;
+        }
+        .right-line{
+            position: absolute;
+            right: -178%;
+            top: 50%;
+            width: 183px;
+        }
+        .news-content a {
+            text-decoration: none;
+        }
+        .news-anniversary,
+        .news-newopen,
+        .news-addline{
+            width: 590px;
+            height: 100px;
+            border-bottom: 1px solid #787a75;
+            display: flex;
+            align-items: center;
+            color: #000;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        .date{
+            margin-right: 20px;
+        }
+        .notice, 
+        .QA,
+        .share,
+        .sub{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .QA{
+            height: 650px; 
+        }
+
+        .notice{
+            height: 650px;
+            background-color: rgba(255, 193, 7, 0.25);
+        }
+        .share{
+            height: 850px;
+            background-color: rgba(144, 161, 131, 0.25);
+        }
+        .sub{
+            height: 400px;
+        }
+        .notice-title, 
+        .QA-title,
+        .share-title,
+        .sub-title{
+            color: #000;
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 8.4px;
+            position: relative;
+        }
+        .notice-content, 
+        .QA-content{
+            display: flex;
+            flex-direction: column;
+        }
+        .notice-content{
+            width: 850px;
+        }
+        .notice-content p, 
+        .QA-content a{
+            margin: 50px 0px 0px 0px;
+            color: #000;
+            text-align: justify;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            line-height: 1.5;
+        }
+        .QA-content a{
+            text-decoration: none;
+        }
+        .notice-readmore, 
+        .QA-readmore,
+        .share-readmore{
+            display: flex;
+            width: 150px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            background-color: #F3F5F2;
+            border: #90A183 solid 1px;
+            border-radius: 10px;
+            position: absolute;
+            right: 10%;
+            bottom: 10%;        
+        }
+        .share-readmore{
+            bottom: 4%;        
+        }
+        .notice-readmore a, 
+        .QA-readmore a,
+        .share-readmore a{
+            display: flex;            
+            text-decoration: none;
+            color: #90A183;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        .share-pic{
+            width: 1200px;
+            height: 532px;
+            position: relative;
+            display: flex;
+            margin: 50px 0px 0px 0px;
+        }
+        .share-pic img:first-child{
+            width: 419px;
+            height: 272px;        
+        }
+        .share-pic img:nth-child(2){
+            width: 230px;
+            height: 203px;
+            position: absolute;
+            bottom: 34px;
+        }
+        .share-pic img:nth-child(3){
+            width: 230px;
+            height: 11px;
+            position: absolute;
+            bottom: 0px;
+        }
+        .share-pic img:nth-child(4){
+            width: 285px;
+            height: 58px;
+            position: absolute;
+            left: 442px;
+        }
+        .share-pic img:nth-child(5){
+            width: 285px;
+            height: 190px;
+            position: absolute;
+            left: 442px;
+            top:81px;
+        }
+        .share-pic img:nth-child(6){
+            width: 474px;
+            height: 237px;
+            position: absolute;
+            bottom: 0;
+            left: 253px;
+        }
+        .share-pic img:nth-child(7){
+            width: 450px;
+            height: 272px;
+            position: absolute;
+            right: 0;
+        }
+        .share-pic img:nth-child(8){
+            width: 450px;
+            height: 19px;
+            position: absolute;
+            right: 0;
+            top:295px;
+        }
+        .share-pic img:nth-child(9){
+            width: 150px;
+            height: 195px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .share-pic img:nth-child(10){
+            width: 277px;
+            height: 195px;
+            position: absolute;
+            bottom: 0;
+            right:173px;
+        }
+        .sub-group{
+            display: flex;
+            position:relative;
+        }
+        .sub h3{
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 1.6px;
+            margin: 60px 0px 15px;
+        }
+        input{
+            border-radius: 3px;            
+            width: 400px;
+            height: 45px;
+            background-color: rgba(144, 161, 131, 0.25);    
+            border: 0;
+            font-size: 16px;
+        }
+        button{
+            border-radius: 3px;
+            border: 1px solid #90A183;
+            width: 100px;
+            height: 35px;
+            margin: 15px;
+            color: #90A183;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sub-group p{
+            color: #90A183;
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 0;
+            right: 0;
+            line-height: 45px;
+        }
+        footer{
+            width: 100%;
+            background-color: #EDF0E7; 
+        }
+        .footer-group{
+            width: 1200px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        .footer-us,
+        .footer-follow,
+        .footer-location{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            height: 140px;
+            margin-right: 50px;
+        }
+        .footer-location{
+            justify-content: center;
+        }
+        .footer-us,
+        .footer-follow{
+            margin-right: 75px; 
+        }
+        .footer-location{
+            margin-left: 75px;
+        }
+        .footer-group h5{
+            font-size: 18px;
+            font-weight: 300;            
+            margin-top: 15px;
+        }
+        .footer-us a,
+        .footer-follow a,
+        .footer-location p{
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 15px;
+            color: #000;
+        }
+        footer .logo{
+            width: 184px;
+            height: 215px;  
+        }
+        .footer-follow img{
+            width: 23px;
+            height: 23px;
+            margin-right: 5px;  
+        }
+        .followicon{
+            margin-top: 15px;
+        }
+        footer img{
+            width: 100%;  
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-group">
+            <div class="header-logo">
+                <a href="front page.html"><img src="../material/LOGO row.svg" alt=""></a>
+            </div>
+            <nav class="header-list">
+                <a href="product.html">精選單品</a>
+                <a href="customized.html">專屬訂製</a>
+                <a href="guide.html">選購指南</a>
+                <a href="inspiration.html">來點靈感</a>
+                <a href="reservation.html">與您有約</a>
+                <a href="#"><img src="../material/user.svg" alt=""></a>
+            </nav>
+        </div>
+    </header>
+    <div class="slideshow" id="top">
+        <img src="../material/style (2).webp" alt="">
+    </div>
+    <div class="backtotop">
+        <a href="#top"><img src="../material/TOP.png" alt=""></a>
+    </div>
+    <div class="newarrive">
+        <div class="newarrive-content">
+            <div class="newarrive-title">
+                <h2 class="title">新品到貨</h2>
+            </div>
+            <div class="newarrive-pic">
+                <div class="newarrive-pic-c103">
+                    <img src="../material/c103.png" alt="">
+                </div>
+                <div class="newarrive-pic-l101">
+                    <img src="../material/l101.png" alt="">
+                </div>
+                <div class="newarrive-pic-hc101">
+                    <img src="../material/hc101.png" alt="">
+                </div>
+                <div class="newarrive-pic-dt101">
+                    <img src="../material/dt101.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="newarrive-readmore">
+            <a href="#">
+                <p>Read more</p>
+                <img src="../material/readmore.svg" alt="">
+            </a>
+        </div>
+        <div class="left-decoration">
+            <img src="../material/decoration-chair.svg" alt="">
+        </div>
+    </div> 
+    
+    <div class="bestseller">
+        <div class="bestseller-content">
+            <div class="bestseller-title">
+                <h2 class="title">熱銷商品</h2>
+            </div>
+            <div class="bestseller-pic">
+                <div class="bestseller-pic-c102-1">
+                    <img src="../material/c102-1.png" alt="">
+                </div>
+                <div class="bestseller-s101-1">
+                    <img src="../material/s101-1.png" alt="">
+                </div>
+                <div class="bestseller-pic-dt102">
+                    <img src="../material/dt102.png" alt="">
+                </div>
+                <div class="bestseller-pic-l102">
+                    <img src="../material/l102.png" alt="">
+                </div>
+            </div>
+            <div class="newarrive-readmore">
+                <a href="#">
+                    <p>Read more</p>
+                    <img src="../material/readmore.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <article class="news">
+        <h2 class="news-title">
+            <img class="left-line" src="../material/align.svg" alt="">
+            最新消息
+            <img class="right-line" src="../material/align.svg" alt="">
+        </h2>
+        <div class="news-content">
+            <a href="#">
+                <div class="news-anniversary">
+                    <span class="date">2023.06.28</span>
+                    <p>萬眾矚目的週年慶開跑囉!限時6折起，錯過再等一年!</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="news-newopen">
+                    <span class="date">2023.05.28</span>
+                    <p>Genial House新莊旗艦店即將於 6/1 隆重開幕!</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="news-addline">
+                    <span class="date">2023.04.17</span>
+                    <p>加入Genial 官方LINE好友，享受更多特惠!</p>
+                </div>
+            </a>
+        </div>
+    </article>
+    <article class="share">
+        <h2 class="share-title">
+            <img class="left-line" src="../material/align.svg" alt="">
+            客戶案例
+            <img class="right-line" src="../material/align.svg" alt="">
+        </h2>
+        <div class="share-pic">
+            <img src="../material/share1.jpg" alt="">
+            <img src="../material/share2.jpg" alt="">
+            <img src="../material/share3.svg" alt="">
+            <img src="../material/share4.svg" alt="">
+            <img src="../material/share5.jpg" alt="">
+            <img src="../material/share6.jpg" alt="">
+            <img src="../material/share7.jpg" alt="">
+            <img src="../material/share8.svg" alt="">
+            <img src="../material/share9.jpg" alt="">
+            <img src="../material/share10.jpg" alt="">
+        </div>
+        <div class="share-readmore">
+            <a href="#">
+                <p>Read more</p>
+                <img src="../material/readmore.svg" alt="">
+            </a>
+        </div>
+    </article>
+    <article class="QA">
+        <h2 class="QA-title">
+            <img class="left-line" src="../material/align.svg" alt="">
+            常見問題
+            <img class="right-line" src="../material/align.svg" alt="">
+        </h2>
+        <div class="QA-content">
+            <a href="">Q：下訂之後多久可以收到呢?可以指定配送日期及時間嗎？</a>
+            <a href="">Q：新收到的家具會有異味嗎？該如何處理？</a> 
+            <a href="">Q：家具是否享有保固呢？保固多久？</a> 
+            <a href="">Q：若家具壞掉該如何維修？過了保固後還能維修嗎？</a> 
+            <a href="">Q：請問參觀需要預約嗎？</a>
+        </div>
+        <div class="QA-readmore">
+            <a href="#">
+                <p>Read more</p>
+                <img src="../material/readmore.svg" alt="">
+            </a>
+        </div>
+    </article>
+    <article class="notice">
+        <h2 class="notice-title">
+            <img class="left-line" src="../material/align.svg" alt="">
+            購買須知
+            <img class="right-line" src="../material/align.svg" alt="">
+        </h2>
+        <div class="notice-content">
+            <p>官網上商品圖片，因天然材質、光線、及電腦螢幕顯色等與實物可能會有些許差異，圖片僅提供參考，敬請見諒。</p>
+            <p>家具運送費用依地區和體積不同而有所差異，計算方式請洽服務人員詢問細節。</p>
+            <p>商品送達時，請於商品定位後一同服務員與確認是否有瑕疪，雙方確認商品沒有問題後，無法進行退換貨。若商品有任何問題請勿簽收，並當場告知服務人員或來電客服協助您處理後續相關事宜。</p>
+        </div>
+        <div class="notice-readmore">
+            <a href="#">
+                <p>Read more</p>
+                <img src="../material/readmore.svg" alt="">
+            </a>
+        </div>
+    </article>
+    <div class="sub">
+        <h2 class="sub-title">
+            <img class="left-line" src="../material/align.svg" alt="">
+            訂閱電子報
+            <img class="right-line" src="../material/align.svg" alt="">
+        </h2>
+        <h3>現在訂閱立即獲得新朋友專屬折扣優惠券</h3>      
+        <input type="text" value="輸入您的電子信箱">
+        <button>
+            訂閱我們
+        </button>
+    </div> 
+    <footer>   
+        <div class="footer-group">    
+            <div class="footer-us">
+                <h5>Genial House</h5>
+                <a href="#">關於我們</a>
+                <a href="#">最新消息</a>
+                <a href="#">購買須知</a>
+                <a href="#">常見問題</a>
+            </div>
+            <div class="footer-follow">
+                <h5>追蹤我們</h5>
+                <a href="#">訂閱電子報</a>
+                <div class="followicon">
+                    <a href="#"><img src="../material/instagram.svg" alt=""></a>
+                    <a href="#"><img src="../material/facebook.svg" alt=""></a>
+                    <a href="#"><img src="../material/youtube.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="../material/LOGO.svg" alt="">
+            </div>
+            <div class="footer-location">
+                <p class="address">
+                    地址：桃園市中壢區復興路46號9樓
+                </p>
+                <p>
+                    營業時間：09:00-22:00(採預約制)
+                </p>
+                <p>
+                    電話：03-425-1108
+                </p>
+                <p>
+                    Mail：OOXX12345@gmail.com
+                </p>
+            </div>
+        </div>
+    </footer>  
+</body>
+</html>

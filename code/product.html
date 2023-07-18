@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genial House 精選商品</title>
+    <link rel="stylesheet" href="Reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #F3F5F2;
+            width: 1200px;
+            font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            overflow-x:hidden;
+        }
+        img{
+            vertical-align: top;
+        }
+        header {
+            height: 85px;
+            width:1200px;
+            background-color: #EDF0E7;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid #90A183;
+        }
+        .header-group {
+            width: 1200px;
+            height: 85px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header-logo {
+            width: 387.46px;
+            margin: 0px 120px 0px 0px;
+        }
+        .header-list a {
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            font-weight: 300;
+            margin: 0px 15px;
+            letter-spacing: 2.4px;
+            vertical-align: bottom;
+        }
+        .backtotop {
+            position: fixed;
+            bottom: 5%;
+            right: 5%;
+            z-index: 10;
+        }
+        .backtotop img {
+            width:100%;
+        }
+        .breadcrumb{
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .breadcrumb li{
+            display: inline;
+            list-style: none;
+        }
+        .breadcrumb li:not(:last-child)::after{
+            content: "　/　";
+        }
+        .breadcrumb li a{
+            text-decoration: none;
+        }
+        .breadcrumb-item{
+            font-size: 18px;
+            font-weight: 300;
+        }
+        main{
+            width: 1200px;
+        }
+        h1{
+            width: 712px;
+            height: 300px;
+            color: rgba(120, 122, 117, 0.20);
+            font-size: 128px;
+            font-weight: 400;
+            letter-spacing: 5.12px;
+            display: flex;
+            align-items: center;
+            margin: auto;
+            text-shadow: 0px 0px 40px rgba(255, 193, 7, 0.5);
+        }
+        .title{
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 8px;
+            position: relative;
+            width: 184px;
+            text-align: center;
+            margin: 30px auto 40px auto;
+        }
+        .left-line{
+            position: absolute;
+            left: -120%;
+            top: 50%;
+            width: 183px;
+        }
+        .right-line{
+            position: absolute;
+            right: -120%;
+            top: 50%;
+            width: 183px;
+        }
+        .product-list a:hover{
+            background: rgba(144, 161, 131, 0.40);
+            border-bottom: 0;
+            border-radius: 3px;
+        }
+        .product-list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+        .product-list a{
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 0.8px;
+            margin: 25px 6px;
+            text-align: justify; 
+        }
+        .product-list a:first-child{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 115px;
+            height: 45px;
+            border-radius: 3px;
+            background: rgba(144, 161, 131, 0.40);
+        }
+        .product-list a:nth-child(2){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 115px;
+            height: 45px;
+            border-radius: 3px;
+            border: #90A183 1px solid;
+        }
+        .product-list a:nth-child(3),
+        .product-list a:nth-child(4){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;;
+            height: 45px;
+            border-radius: 3px;
+            border: #90A183 1px solid;
+        }
+        article{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .product-C101,
+        .product-C102,
+        .product-C103,
+        .product-C104,
+        .product-C105{
+            margin-top:60px;
+            margin-bottom: 125px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            position: relative;
+            background-image: url(../material/dust_scratches.webp);
+        }
+        .product-C101,
+        .product-C102,
+        .product-C103,
+        .product-C105{
+            width: 900px;
+            height: 478px;
+        }
+        .product-C104{
+            width: 900px;
+            height: 610px
+        }
+        .product-C101,
+        .product-C103{
+            flex-direction: row;
+            border: #90A183 solid 1px;
+        }
+        .product-C104{
+            flex-direction: column;
+            border: 1px solid #90A183;
+        }
+        .product-C102,
+        .product-C105{
+            flex-direction: row-reverse;
+            border: #90A183 solid 1px;
+        }
+        .product-C101-pic{
+            width: 250px;
+            height: 320px;
+            margin: 35px 10px 35px 35px;
+        }
+        .product-C102-pic{
+            width: 250px;
+            height: 320px;
+            margin: 35px 35px 35px 10px;
+        }
+        .product-C103-pic{
+            width: 350px;
+            height: 300px;
+            margin: 35px 10px 35px 35px;
+        }
+        .product-C104-pic{
+            width: 450px;
+            height: 250px;
+            margin: 30px 0px 5px;
+        }
+        .product-C105-pic{
+            width: 350px;
+            height: 180px;
+            margin: 35px 35px 35px 10px;
+        }
+        .product-C101-pic img,
+        .product-C102-pic img,
+        .product-C103-pic img,
+        .product-C104-pic img,
+        .product-C105-pic img{
+            width: 100%;
+            height: 100%;
+        }
+        .product-C101-txt,
+        .product-C102-txt,
+        .product-C103-txt,
+        .product-C104-txt,
+        .product-C105-txt{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        .product-C101-txt,
+        .product-C102-txt,
+        .product-C103-txt,
+        .product-C105-txt{
+            margin: 35px;
+        }
+        .product-C101-txt p,
+        .product-C102-txt p,
+        .product-C103-txt p,
+        .product-C105-txt p{
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 4.8px;
+            margin: 15px 15px;
+        }
+        .product-C104-txt p{
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 4.8px;
+            margin: 10px 15px;
+        }
+        .product-C101-txt h3,
+        .product-C102-txt h3,
+        .product-C103-txt h3,
+        .product-C105-txt h3{
+            font-size: 32px;
+            font-weight: 400;
+            letter-spacing: 9.6px;
+            margin: 15px 15px;
+        }
+        .product-C104-txt h3{
+            font-size: 32px;
+            font-weight: 400;
+            letter-spacing: 9.6px;
+            margin: 10px 15px;
+        }
+        .product-C101-content,
+        .product-C102-content,
+        .product-C103-content,
+        .product-C105-content{
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 6px;
+            margin: 15px 15px;
+            width: 400px;
+            line-height: 125%;
+        }
+        .product-C104-content{
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 6px;
+            margin: 5px 15px 15px;
+            width: 550px;
+            line-height: 125%;
+        }
+        .product-C101-decoration{
+            position: absolute;
+            width: 150px;
+            height: 300px;
+            right: -10%;
+            bottom: -5%;
+        }
+        .product-C102-decoration{
+            width: 280px;
+            height: 150px;
+            position: absolute;
+            left: -15%;
+            bottom: -15%;
+        }
+        .product-C103-decoration{
+            position: absolute;
+            width: 240px;
+            height: 150px;
+            right: -15%;
+            bottom: -15%;
+        }
+        .product-C104-decoration{
+            position: absolute;
+            width: 130px;
+            height: 220px;
+            left: -5%;
+            bottom: 0;
+        }
+        .product-C105-decoration{
+            position: absolute;
+            width: 418px;
+            height: 100px;
+            right: -20%;
+            top: -10%;
+        }
+        .product-C101-decoration img,
+        .product-C102-decoration img,
+        .product-C103-decoration img,
+        .product-C104-decoration img,
+        .product-C105-decoration img{
+            width: 100%;
+            height: 100%;
+        }
+        .prooduct-C102-style,
+        .prooduct-C105-style{
+            display: flex;
+            margin: 15px 15px;
+        }
+        .prooduct-C104-style{
+            display: flex;
+            margin: 10px 15px;
+        }
+        .prooduct-C102-style img,
+        .prooduct-C104-style img,
+        .prooduct-C105-style img{
+            width: 20px;
+            height:20px;
+            margin: 0px 10px 0px 0px;
+            border-radius: 50%;
+        }
+        .prooduct-C102-style img:hover,
+        .prooduct-C104-style img:hover,
+        .prooduct-C105-style img:hover{
+            border: #000 2px solid;
+        }
+        footer{
+            width:1200px;
+            background-color: #EDF0E7; 
+        }
+        .footer-group{
+            width:1200px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-us,
+        .footer-follow,
+        .footer-location{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            height: 140px;
+            margin-right: 50px;
+        }
+        .footer-location{
+            justify-content: center;
+        }
+        .footer-us,
+        .footer-follow{
+            margin-right: 75px; 
+        }
+        .footer-location{
+            margin-left: 75px;
+        }
+        .footer-group h5{
+            font-size: 18px;
+            font-weight: 300;            
+            margin-top: 15px;
+        }
+        .footer-us a,
+        .footer-follow a,
+        .footer-location p{
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 15px;
+            color: #000;
+        }
+        footer .logo{
+            width: 184px;
+            height: 215px;  
+        }
+        .footer-follow img{
+            width: 23px;
+            height: 23px;
+            margin-right: 5px;  
+        }
+        .followicon{
+            margin-top: 15px;
+        }
+        footer img{
+            width: 100%;  
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-group">
+            <div class="header-logo">
+                <a href="front page.html"><img src="../material/LOGO row.svg" alt=""></a>
+            </div>
+            <nav class="header-list">
+                <a href="product.html">精選單品</a>
+                <a href="customized.html">專屬訂製</a>
+                <a href="guide.html">選購指南</a>
+                <a href="inspiration.html">來點靈感</a>
+                <a href="reservation.html">與您有約</a>
+                <a href="#"><img src="../material/user.svg" alt=""></a>
+            </nav>
+        </div>
+    </header>
+    <div class="backtotop">
+        <a href="#top"><img src="../material/TOP.png" alt=""></a>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="front page.html">首頁</a></li>
+            <li class="breadcrumb-item"><a href="product.html">精選商品</a></li>
+        </ol>
+    </nav>
+    <main>
+        <h1>PRODUCT</h1>
+        <h2 class="title">
+            <img class="left-line" src="../material/align.svg" alt="">
+            精選單品
+            <img class="right-line" src="../material/align.svg" alt="">            
+        </h2>
+        <div class="product-list">
+            <a href="#">沙發/餐椅</a>
+            <a href="#">茶几/餐桌</a>
+            <a href="#">櫥櫃</a>
+            <a href="#">植栽</a>
+        </div>
+        <article>
+            <article class="product-C104">
+                <div class="product-C104-pic">
+                    <img src="../material/s101-1.png" alt="">
+                </div>
+                <div class="product-C104-txt">
+                    <p>C104</p>
+                    <h3>雙人躺沙發椅</h3>
+                    <p>
+                        #悠閒午後 #恬淡安靜
+                    </p>
+                    <div class="prooduct-C104-style">
+                        <img src="../material/C104-B.svg" alt="">
+                        <img src="../material/C104-G.svg" alt="">
+                        <img src="../material/C104-W.svg" alt="">
+                    </div>
+                    <div class="product-C104-content">
+                        絢暖白貓抓布搭配深色柚木椅腳，不但使空間增添一抹趣味，還帶有極佳的承重及抗震力，以柔和大方的輪廓呈現最優雅而個性的生活態度。
+                    </div>
+                </div>
+                <div class="product-C104-decoration">
+                    <img src="../material/decoration-plant.png" alt="">
+                </div>
+            </article>
+            <article class="product-C101">
+                <div class="product-C101-pic">
+                    <img src="../material/c101-1.png" alt="">
+                </div>
+                <div class="product-C101-txt">
+                    <p>C101</p>
+                    <h3>舒適藤編椅</h3>
+                    <p>
+                        #夏日首選 #優雅美觀
+                    </p>
+                    <div class="product-C101-content">
+                        藤編處全真藤手工編織，符合人體工學設計，美感與實用兼具，炎炎夏日輕盈通透，久坐不累。
+                    </div>
+                </div>
+                <div class="product-C101-decoration">
+                    <img src="../material/decoration-cabinet.png" alt="">
+                </div>
+            </article>
+            <article class="product-C102">
+                <div class="product-C102-pic">
+                    <img src="../material/c102-1.png" alt="">
+                </div>
+                <div class="product-C102-txt">
+                    <p>C102</p>
+                    <h3>簡約藤編休閒椅</h3>
+                    <p>
+                        #溫潤經典 #簡約俐落
+                    </p>
+                    <div class="prooduct-C102-style">
+                        <img src="../material/C102-D.svg" alt="">
+                        <img src="../material/C102-B.svg" alt="">
+                        <img src="../material/C102-Y.svg" alt="">
+                    </div>
+                    <div class="product-C102-content">
+                        木頭與木藤帶來自然的感覺，打造專屬於你的溫馨空間，讓它隨著時間陪著我們生活。
+                    </div>
+                </div>
+                <div class="product-C102-decoration">
+                    <img src="../material/decoration-sofa.png" alt="">
+                </div>
+            </article>
+            <article class="product-C103">
+                <div class="product-C103-pic">
+                    <img src="../material/c103.png" alt="">
+                </div>
+                <div class="product-C103-txt">
+                    <p>C103</p>
+                    <h3>舒適單人椅</h3>
+                    <p>
+                        #細膩質感 #輕奢格調
+                    </p>
+                    <div class="product-C103-content">
+                        像白雲一樣軟綿綿的沙發，環形包覆、造型獨特，像身在床上一般消散疲憊，享受前所未有的放鬆。
+                    </div>
+                </div>
+                <div class="product-C103-decoration">
+                    <img src="../material/decoration-table.png" alt="">
+                </div>
+            </article>
+            
+            <article class="product-C105">
+                <div class="product-C105-pic">
+                    <img src="../material/s102-1.png" alt="">
+                </div>
+                <div class="product-C105-txt">
+                    <p>C105</p>
+                    <h3>舒適單人椅</h3>
+                    <p>
+                        #細膩質感 #輕奢格調
+                    </p>
+                    <div class="prooduct-C105-style">
+                        <img src="../material/C105-B.svg" alt="">
+                        <img src="../material/C105-P.svg" alt="">
+                        <img src="../material/C105-G.svg" alt="">
+                    </div>
+                    <div class="product-C105-content">
+                        像白雲一樣軟綿綿的沙發，環形包覆、造型獨特，像身在床上一般消散疲憊，享受前所未有的放鬆。
+                    </div>
+                </div>
+                <div class="product-C105-decoration">
+                    <img src="../material/decoration-chandelier.png" alt="">
+                </div>
+            </article>
+        </article>
+    </main>
+    <footer>   
+        <div class="footer-group">    
+            <div class="footer-us">
+                <h5>Genial House</h5>
+                <a href="#">關於我們</a>
+                <a href="#">最新消息</a>
+                <a href="#">購買須知</a>
+                <a href="#">常見問題</a>
+            </div>
+            <div class="footer-follow">
+                <h5>追蹤我們</h5>
+                <a href="#">訂閱電子報</a>
+                <div class="followicon">
+                    <a href="#"><img src="../material/instagram.svg" alt=""></a>
+                    <a href="#"><img src="../material/facebook.svg" alt=""></a>
+                    <a href="#"><img src="../material/youtube.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="../material/LOGO.svg" alt="">
+            </div>
+            <div class="footer-location">
+                <p class="address">
+                    地址：桃園市中壢區復興路46號9樓
+                </p>
+                <p>
+                    營業時間：09:00-22:00(採預約制)
+                </p>
+                <p>
+                    電話：03-425-1108
+                </p>
+                <p>
+                    Mail：OOXX12345@gmail.com
+                </p>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>
