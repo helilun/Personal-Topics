@@ -11,7 +11,7 @@
         .newarrive-content,
         .bestseller-content{
             display: flex;
-            margin: 10% 10% 0px;
+            margin: 10% 10% 15%;
          }
         .newarrive-pic{
             border-radius: 100px 0px;
@@ -85,7 +85,7 @@
         }
         .newarrive-pic:hover,
         .bestseller-pic:hover{
-            transform: translate(-5%, -5%);
+            transform: translate(-2%, -2%);
         }
         .newarrive .btn,
         .bestseller .btn{
@@ -106,12 +106,12 @@
             letter-spacing: 0px;
         }
         .news{
-            height: 650px;
+            height: 450px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 4% 0%;
             flex-direction: column;
+            margin-bottom: 10%;
         }
         .news-content a{
             text-decoration: none;
@@ -124,6 +124,14 @@
             font-size: 20px;
             font-weight: 400;            
             padding: 45px;
+        }
+        .news-content{
+            border-top: 1px solid #787a75;
+        }
+        .news h2{
+            margin-bottom: 2%;
+            font-size: 22px;
+            font-weight: 400; 
         }
         .news span{
             margin-right: 60px;
@@ -284,7 +292,7 @@
         }
         .choosereason{
             width: 250px;
-            height: 550px;    
+            height: 500px;    
             margin: 50px;
             background-image: url(../material/pw_pattern.png) ;
             box-shadow: 0px 0px 1px #000 ;
@@ -312,7 +320,7 @@
             height: 180px;
         }
         .choosereason:hover{
-            transform: translate(0%, -10%);
+            transform: translate(0%, -2%);
         }
         .content h3{
             text-align: center;
@@ -335,7 +343,6 @@
             align-items: center;
             flex-direction: column;
         }
-        .news h2,
         .choosegroup h2,
         .share h2,
         .sub h2,

@@ -126,3 +126,22 @@ footer .logo{
 footer img{
     width: 100%;  
 }
+.breadcrumb{
+    margin-top: 2%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: flex-start;
+}
+.breadcrumb li{
+    display: inline;
+    list-style: none;
+}
+.breadcrumb li:not(:last-child)::after{
+    content: "　/　";
+}
+.breadcrumb li a{
+    text-decoration: none;
+}
+.breadcrumb-item{
+    font-size: 18px;    
+}
