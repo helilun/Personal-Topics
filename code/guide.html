@@ -11,328 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        body{
-            background-color: #F3F5F2;
-            width: 1200px;
-            font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
-            display: flex;
-            flex-wrap: wrap;
-            margin: auto;
-            overflow-x:hidden;
-        }
-        img{
-            vertical-align: middle;
-        }
-        header{
-            height: 85px;
-            width: 1200px;
-            background-color: #EDF0E7;
-            position: sticky;
-            top:0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 10;
-            border-bottom: 1px solid #90A183;
-        }
-        .header-group {
-            width: 1200px;
-            height: 85px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .header-logo {
-            width: 387.46px;
-            margin-right: 120px;
-        }
-        .header-list a {
-            text-decoration: none;
-            color: #000;
-            font-size: 20px;
-            font-weight: 300;
-            margin: 0px 15px;
-            letter-spacing: 2.4px;
-            vertical-align: bottom;
-        }
-        .backtotop{
-            position: fixed;
-            bottom: 5%;
-            right: 5%;
-            z-index: 10;
-        }
-        .backtotop img{
-            width:100%;
-        }
-        .breadcrumb{
-            margin-top: 30px;
-            display: flex;
-            justify-content: flex-start;
-        }
-        .breadcrumb li{
-            display: inline;
-            list-style: none;
-        }
-        .breadcrumb li:not(:last-child)::after{
-            content: "　/　";
-        }
-        .breadcrumb li a{
-            text-decoration: none;
-        }
-        .breadcrumb-item{
-            font-size: 18px;
-            font-weight: 300;
-        }
-        main{
-            position:relative;
-            margin: auto;
-        }
-        .circle{
-            width: 450px;
-            height: 450px;
-            border: #FFC107 solid 1px;
-            position: absolute;
-            border-radius: 50%;
-            top: 30%;
-            left: -40%;
-        }
-        .circle2{
-            width: 450px;
-            height: 450px;
-            border: #FFC107 solid 1px;
-            position: absolute;
-            border-radius: 50%;
-            bottom: 30%;
-            right: -40%;
-        }
-        h1{
-            color: rgba(120, 122, 117, 0.20);
-            font-size: 128px;
-            font-weight: 400;
-            letter-spacing: 5.12px;
-            width: 466px;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            margin: auto;
-            text-shadow: 0px 0px 40px rgba(255, 193, 7, 0.5);
-        }
-        .title{
-            font-size: 28px;
-            font-weight: 400;
-            letter-spacing: 8px;
-            position: relative;
-            width: 184px;
-            text-align: center;
-            margin: auto;
-        }
-        .left-line{
-            position: absolute;
-            left: -120%;
-            top: 50%;
-            width: 183px;
-        }
-        .right-line{
-            position: absolute;
-            right: -120%;
-            top: 50%;
-            width: 183px;
-        }
-        .guide-list{
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 60px;
-            margin-bottom: 60px;
-        }
-        .guide-list-btn{
-            width: 100px;
-            height: 50px;
-            border: 1px solid #90A183;
-            border-radius: 45px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .guide-list-btn a{
-            text-decoration: none;
-            color: #000;
-            font-size: 20px;
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
-        .guide-list-btn:hover{
-            background: #90A183;
-        }
-        .writing-group{
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 1140px;
-            gap: 45px;
-            row-gap: 50px;
-            margin-bottom: 75px;
-        }
-        .writing{
-            width: 350px;
-            height: 480px;
-            box-sizing: border-box;
-            border-radius: 5px;
-            border: 1px solid #787A75;
-            position: relative;
-            background-color: #fff;
-        }
-        h3{
-            font-size: 18px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            line-height: 125%;
-            width: 280px;
-            margin-top: 10px;
-        }
-        .txt{
-            display: flex;
-            flex-wrap: wrap;
-            padding-left: 35px;
-        }
-        .txt p{
-            color: #90A183;
-            font-size: 14px;
-            font-weight: 300;
-            letter-spacing: 0.6px;
-            width: 40px;
-            margin-right: 12px;
-            margin-top: 30px;   
-            margin-bottom: 10px;
-        }
-        .pic{
-            width: 100%;
-            height: 64.166666%;
-        }
-        .pic img{
-            width: 100%;
-            height: 100%;
-        }
-        .btn{
-            width: 115px;
-            height: 25px;
-            border: #90A183 solid 1px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            bottom: 25px;
-            right: 25px;
-            font-weight: 300;
-        }
-        .btn:hover{
-            background-color: rgba(255, 193, 7, 0.50);
-        }
-        .btn{
-            text-decoration: none;
-            color: #90A183;
-            font-size: 14px;
-            font-weight: 400;
-            letter-spacing: 0.6px;
-            vertical-align: bottom;
-        }
-        .btn img{
-            width: 20px;
-            height: 20px;
-        }
-        .pagination{
-            display: flex;
-            justify-content: center;
-            margin-bottom: 75px;
-        }
-        .page-item{
-            width: 50px;
-            height: 50px;
-            margin: 0px 20px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: #90A183 solid 1px;
-            color: #90A183;
-            font-size: 20px;
-            font-weight: 400;
-        }
-        .pagination > .page-item:first-child{
-            background-color: #90A183;
-            color: #F3F5F2;
-        }
-        .page-link{
-            text-decoration: none;
-        }
-        .page-item:hover{
-            background-color: #90A183;
-            color: #F3F5F2;
-            border: none;
-        }
-        footer{
-            width:1200px;
-            background-color: #EDF0E7; 
-        }
-        .footer-group{
-            width:1200px;
-            height: 250px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .footer-us,
-        .footer-follow,
-        .footer-location{
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            height: 140px;
-            margin-right: 50px;
-        }
-        .footer-location{
-            justify-content: center;
-        }
-        .footer-us,
-        .footer-follow{
-            margin-right: 75px; 
-        }
-        .footer-location{
-            margin-left: 75px;
-        }
-        .footer-group h5{
-            font-size: 18px;
-            font-weight: 300;            
-            margin-top: 15px;
-        }
-        .footer-us a,
-        .footer-follow a,
-        .footer-location p{
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 300;
-            margin-top: 15px;
-            color: #000;
-        }
-        footer .logo{
-            width: 184px;
-            height: 215px;  
-        }
-        .footer-follow img{
-            width: 23px;
-            height: 23px;
-            margin-right: 5px;  
-        }
-        .followicon{
-            margin-top: 15px;
-        }
-        footer img{
-            width: 100%;  
-        }
-    </style>
+    <link rel="stylesheet" href="guide.css">
+    <link rel="stylesheet" href="common.css">
 </head>
 <body>
     <header>
@@ -387,7 +67,6 @@
                 <a href="#">#燈具</a>
             </div>
         </div>
-        <div class="circle"></div>
         <article class="writing-group">
             <article class="writing">
                 <div class="pic">
@@ -404,12 +83,12 @@
                         沙發挑選全指南! 7個步驟，找到最適合的沙發
                     </h3>
                 </div>
-                <a href="#">
+                <a href="https://www.stimlig.com/how-to-choose-sofa/">
                     <div class="btn">
-                        Read more
-                        <img src="../material/readmore.svg" alt="">
+                        Read more ⇀
                     </div>
                 </a>
+                <div class="circle"></div>
             </article>
             <article class="writing">
                 <div class="pic">
@@ -428,8 +107,7 @@
                 </div>
                 <a href="#">
                     <div class="btn">
-                        Read more
-                        <img src="../material/readmore.svg" alt="">
+                        Read more ⇀
                     </div>
                 </a>
             </article>
@@ -453,8 +131,7 @@
                 </div>
                 <a href="#">
                     <div class="btn">
-                        Read more
-                        <img src="../material/readmore.svg" alt="">
+                        Read more ⇀
                     </div>
                 </a>
             </article>    
@@ -474,8 +151,7 @@
                     </h3>
                     <a href="#">
                         <div class="btn">
-                            Read more
-                            <img src="../material/readmore.svg" alt="">
+                            Read more ⇀
                         </div>
                     </a>
                 </div>
@@ -497,11 +173,12 @@
                 </div>
                 <a href="#">
                     <div class="btn">
-                        Read more
-                        <img src="../material/readmore.svg" alt="">
+                        Read more ⇀
                     </div>
                 </a>
-            </article>    
+                <div class="circle2"></div>
+            </article>
+            <div class="circle2"></div>
             <article class="writing">
                 <div class="pic">
                     <img src="../material/guide6.webp" alt="">
@@ -519,12 +196,10 @@
                 </div>
                 <a href="#">
                     <div class="btn">
-                        Read more
-                        <img src="../material/readmore.svg" alt="">
+                        Read more ⇀
                     </div>
                 </a>
-            </article>
-            <div class="circle2"></div>
+            </article>            
             <article class="writing">
                 <div class="pic">
                     <img src="../material/guide7.jpg" alt="">
@@ -542,8 +217,7 @@
                 </div>
                 <a href="#">
                     <div class="btn">
-                        Read more
-                        <img src="../material/readmore.svg" alt="">
+                        Read more ⇀
                     </div>
                 </a>
             </article>    
@@ -564,8 +238,7 @@
                 </div>
                 <a href="#">
                     <div class="btn">
-                        Read more
-                        <img src="../material/readmore.svg" alt="">
+                        Read more ⇀
                     </div>
                 </a>
             </article>    
@@ -589,8 +262,7 @@
                 </div>
                 <a href="#">
                     <div class="btn">
-                        Read more
-                        <img src="../material/readmore.svg" alt="">
+                        Read more ⇀
                     </div>
                 </a>
             </article>    
@@ -606,26 +278,15 @@
     <footer>   
         <div class="footer-group">    
             <div class="footer-us">
-                <h5>Genial House</h5>
-                <a href="#">關於我們</a>
-                <a href="#">最新消息</a>
+                <a href="aboutus.html">關於我們</a>
                 <a href="#">購買須知</a>
                 <a href="#">常見問題</a>
-            </div>
-            <div class="footer-follow">
-                <h5>追蹤我們</h5>
-                <a href="#">訂閱電子報</a>
-                <div class="followicon">
-                    <a href="#"><img src="../material/instagram.svg" alt=""></a>
-                    <a href="#"><img src="../material/facebook.svg" alt=""></a>
-                    <a href="#"><img src="../material/youtube.svg" alt=""></a>
-                </div>
             </div>
             <div class="logo">
                 <img src="../material/LOGO.svg" alt="">
             </div>
             <div class="footer-location">
-                <p class="address">
+                <p>
                     地址：桃園市中壢區復興路46號9樓
                 </p>
                 <p>

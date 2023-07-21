@@ -1,0 +1,234 @@
+        .product-list{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 80px;
+            margin-bottom: 120px;
+            height: 45px;
+        }
+        .product-list a{
+            text-decoration: none;
+            font-size: 18px;
+            margin: 25px 6px;
+            text-align: justify;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            height: 45px;
+            border: #90A183 1px solid;
+            color: #90A183;
+        }
+        .product-list a:first-child{
+            width: 115px;
+            background-color: #90A183;
+            border: #90A183 1px solid;
+            color: #F3F5F2;
+        }
+        .product-list a:nth-child(2){
+            width: 115px;
+        }
+        .product-list a:nth-child(3),
+        .product-list a:nth-child(4){
+            width: 65px;
+        }
+        .product-list a:hover{
+            background-color: #90A183;
+            color: #F3F5F2;
+        }
+        article{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .product-C101,
+        .product-C102,
+        .product-C103,
+        .product-C104,
+        .product-C105{
+            margin-bottom: 125px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            position: relative;
+            background-image: url(../material/dust_scratches.webp);
+        }
+        .product-C101,
+        .product-C102,
+        .product-C103,
+        .product-C105{
+            width: 900px;
+            height: 478px;
+            box-shadow: 0px 0px 10px #6C6C6C;
+        }
+        .product-C104{
+            width: 900px;
+            height: 610px;
+            box-shadow: 0px 0px 10px #6C6C6C;
+        }
+        .product-C101,
+        .product-C103{
+            flex-direction: row;
+            border: #90A183 solid 1px;
+        }
+        .product-C104{
+            flex-direction: column;
+            border: 1px solid #90A183;
+        }
+        .product-C102,
+        .product-C105{
+            flex-direction: row-reverse;
+            border: #90A183 solid 1px;
+        }
+        .product-C101-pic{
+            width: 230px;
+            height: 300px;
+            margin: 35px 10px 35px 35px;
+        }
+        .product-C102-pic{
+            width: 240px;
+            height: 320px;
+            margin: 35px 35px 35px 10px;
+        }
+        .product-C103-pic{
+            width: 300px;
+            height: 270px;
+            margin: 35px 10px 35px 35px;
+        }
+        .product-C104-pic{
+            width: 450px;
+            height: 230px;
+            margin: 30px 0px 0px;
+        }
+        .product-C105-pic{
+            width: 320px;
+            height: 180px;
+            margin: 35px 35px 35px 10px;
+        }
+        .product-C101-pic img,
+        .product-C102-pic img,
+        .product-C103-pic img,
+        .product-C104-pic img,
+        .product-C105-pic img{
+            width: 100%;
+            height: 100%;
+        }
+        .product-C101-txt,
+        .product-C102-txt,
+        .product-C103-txt,
+        .product-C104-txt,
+        .product-C105-txt{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        .product-C101-txt,
+        .product-C102-txt,
+        .product-C103-txt,
+        .product-C105-txt{
+            margin: 35px;
+        }
+        .product-C101-txt p,
+        .product-C102-txt p,
+        .product-C103-txt p,
+        .product-C105-txt p{
+            font-size: 16px;
+            margin: 15px 15px;
+        }
+        .product-C104-txt p{
+            font-size: 16px;
+            margin: 10px 15px;
+        }
+        .product-C101-txt h3,
+        .product-C102-txt h3,
+        .product-C103-txt h3,
+        .product-C105-txt h3{
+            font-size: 32px;
+            font-weight: 400;
+            margin: 15px 15px;
+        }
+        .product-C104-txt h3{
+            font-size: 32px;
+            font-weight: 400;
+            margin: 10px 15px;
+        }
+        .product-C101-content,
+        .product-C102-content,
+        .product-C103-content,
+        .product-C105-content{
+            font-size: 18px;
+            margin: 15px 15px;
+            width: 400px;
+        }
+        .product-C104-content{
+            font-size: 18px;
+            margin: 5px 15px 15px;
+            width: 650px;
+        }
+        .product-C101-decoration{
+            position: absolute;
+            width: 150px;
+            height: 300px;
+            right: -20%;
+            bottom: 0%;
+        }
+        .product-C102-decoration{
+            width: 280px;
+            height: 150px;
+            position: absolute;
+            left: -35%;
+            bottom: 0%;
+        }
+        .product-C103-decoration{
+            position: absolute;
+            width: 240px;
+            height: 150px;
+            right: -30%;
+            bottom: 0%;
+        }
+        .product-C104-decoration{
+            position: absolute;
+            width: 130px;
+            height: 220px;
+            left: -20%;
+            bottom: 0;
+        }
+        .product-C105-decoration{
+            position: absolute;
+            width: 418px;
+            height: 100px;
+            right: 25%;
+            top: -10%;
+        }
+        .product-C101-decoration img,
+        .product-C102-decoration img,
+        .product-C103-decoration img,
+        .product-C104-decoration img,
+        .product-C105-decoration img{
+            width: 100%;
+            height: 100%;
+        }
+        .prooduct-C102-style,
+        .prooduct-C105-style{
+            display: flex;
+            margin: 15px 15px;
+        }
+        .prooduct-C104-style{
+            display: flex;
+            margin: 10px 15px;
+        }
+        .prooduct-C102-style img,
+        .prooduct-C104-style img,
+        .prooduct-C105-style img{
+            width: 20px;
+            height:20px;
+            margin: 0px 10px 0px 0px;
+            border-radius: 50%;
+        }
+        .prooduct-C102-style img:hover,
+        .prooduct-C104-style img:hover,
+        .prooduct-C105-style img:hover{
+            box-shadow: 0px 0px 5px #000;
+        }
