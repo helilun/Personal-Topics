@@ -1,7 +1,7 @@
 .circle{
     width: 450px;
     height: 450px;
-    background-image: url(/material/stripes-light.webp);
+    background-image: url(../material/stripes-light.webp);
     border-radius: 50%;
     position: absolute;
     left: -150%;
@@ -14,7 +14,7 @@
     position: absolute;
     right: -200%;
     top: 0%;
-    background-image: url(/material/stripes-light.webp);
+    background-image: url(../material/stripes-light.webp);
 }
 .guide-list{
     display: flex;
