@@ -62,9 +62,13 @@
             margin: 45px 0px 15px;
             font-size: 18px;
         }
-        span{
+        input[type="text"]{
             font-size: 14px;
-            font-weight: 400;
+            font-weight: 500;
+            font-family: "Noto+Sans+TC", "Montserrat";
+            line-height: 35px;
+            letter-spacing: 2px;
+            padding-left: 10px;
         }
         .visit-form input{
             height: 40px;

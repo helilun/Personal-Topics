@@ -319,9 +319,6 @@
             width: 180px;
             height: 180px;
         }
-        .choosereason:hover{
-            transform: translate(0%, -2%);
-        }
         .content h3{
             text-align: center;
             font-size: 18px;
@@ -353,15 +350,21 @@
         }
         .sub h3{
             font-size: 16px;
-            margin-top: 1%;
+            margin-top: 1.5%;
         }
         .sub input{
             border-radius: 3px;            
-            width: 400px;
+            width: 325px;
             height: 45px;
             background-color: rgba(144, 161, 131, 0.25);    
             border: 0;
             font-size: 16px;
+        }
+        .sub input[type="text"]{
+            font-family: "Noto+Sans+TC";
+            line-height: 35px;
+            letter-spacing: 2px;
+            padding-left: 7px;
         }
         .sub button{
             color: #90A183;
@@ -372,7 +375,7 @@
             border: 1px solid #90A183;
             width: 100px;
             height: 45px;
-            margin-top: 50px;
+            margin-top: 45px;
         }
         .sub button:hover{
             background-color: #90A183;

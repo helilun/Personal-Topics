@@ -10,6 +10,9 @@ body{
 img{
     vertical-align: middle;
 }
+a{
+    text-decoration: none;
+}
 header {
     height: 85px;
     width: 100%;
@@ -29,15 +32,17 @@ header {
     align-items: center;
 }
 .header-logo {
-    width: 387.46px;
+    width: 367px;
     margin-right: 120px;
 }
 .header-list a {
-    text-decoration: none;
     color: #000;
     font-size: 20px;
     margin: 0px 15px;
-    vertical-align: bottom;
+}
+.header-list a img{
+    width: 20px;
+    height: 30px;
 }
 .backtotop {
     position: fixed;
@@ -110,7 +115,6 @@ footer{
     margin-left: 40px;
 }
 .footer-us a{
-    text-decoration: none;
     font-size: 16px;
     color: #000;
     margin-right: 40px;
@@ -139,9 +143,9 @@ footer img{
 .breadcrumb li:not(:last-child)::after{
     content: "　/　";
 }
-.breadcrumb li a{
-    text-decoration: none;
-}
 .breadcrumb-item{
     font-size: 18px;    
+}
+.c{
+    text-align: center;
 }
