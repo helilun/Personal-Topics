@@ -8,26 +8,25 @@
 .share{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 35px;
+    margin: 30px 0px;
 }
 .share-group{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .share-lin .pic,
 .share-kuo .pic{
     width: 500px;
-    height: 450px;
+    height: 420px;
 }
 .share-lin,
 .share-kuo{
-    width: 500px;
     position: relative;
-    margin: 70px 0px 80px;
+    margin: 5% 0%;
 }
 .share-lin{
-    margin-right: 140px;
+    margin-right: 10%;
 }
 .share img{
     width: 100%;
