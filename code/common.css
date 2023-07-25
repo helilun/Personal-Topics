@@ -13,7 +13,7 @@ img{
 a{
     text-decoration: none;
 }
-header {
+header{
     height: 85px;
     width: 100%;
     background-color: #FFF;
@@ -24,25 +24,21 @@ header {
     align-items: center;
     z-index: 10;
 }
-.header-group {
+.header-group{
     width: 1200px;
     height: 85px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.header-logo {
+.header-logo{
     width: 367px;
     margin-right: 120px;
 }
-.header-list a {
+.header-list a{
     color: #000;
     font-size: 20px;
     margin: 0px 15px;
-}
-.header-list a img{
-    width: 20px;
-    height: 30px;
 }
 .backtotop {
     position: fixed;
