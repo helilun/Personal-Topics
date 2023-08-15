@@ -292,8 +292,8 @@
         }
         .choosereason{
             width: 250px;
-            height: 500px;    
-            margin: 50px;
+            height: 520px;    
+            margin: 30px;
             background-image: url(../material/pw_pattern.png) ;
             box-shadow: 0px 0px 1px #000 ;
             border-radius: 10px 10px 10px 10px;
@@ -306,15 +306,6 @@
             align-items: center; 
             border-radius: 10px 10px 0px 0px;
         }
-        .pic.b{
-            background-color: rgba(120, 122, 117, 0.50);
-        }
-        .pic.y{
-            background-color: rgba(144, 161, 131, 0.50);
-        }
-        .pic.g{
-            background-color: rgba(255, 193, 7, 0.50);
-        }
         .pic img{
             width: 180px;
             height: 180px;
@@ -323,14 +314,14 @@
             text-align: center;
             font-size: 18px;
             font-weight: 400;
-            margin-top: 5%;
+            margin-top: 3.5%;
         }
         .content h4{
             text-align: center;
             font-size: 16px;
         }
         .content p{
-            padding: 4%;
+            padding: 0% 6.5%;
             font-size: 14px;
             text-align: justify;
         }

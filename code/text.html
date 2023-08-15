@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    @media screen and (max-width: 1115px) {
+        .hamburger{
+            margin: 0px 5px;
+        }
+        .hamburger span{
+            width: 70%;
+            height: 3px;
+            background-color: #000;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+        }
+        .hamburger label{
+            width: 40px;
+            height: 40px;
+            display: block;
+            position: relative;
+        }
+        .header-list{
+            position: absolute;
+            z-index: 10;
+            width: 30%;
+            background-color: #FFF;
+            top: 100%;
+            right: 0%;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            opacity: 0;
+            translate: -100% 0%;
+            transition: opacity 1s, translate 0s 1s;
+        }
+        .header-list a:hover{
+            background-color: #90a18388;
+        }
+        #menu-switch:checked + .group-list .header-list{
+                translate: 0% 0%;
+                opacity: 1;
+                transition: opacity 1s;
+        }
+        .hamburger span:nth-child(1){
+            translate: 0px -10px;
+            rotate: 0deg;
+            transition: translate 0.3s 0.3s,
+                        rotate 0.3s 0s;
+            }
+        .hamburger span:nth-child(2){
+            opacity: 1;
+            transition: opacity 0.3s 0.6s;
+        }
+        .hamburger span:nth-child(3){
+            translate: 0px 10px;
+            rotate: 0deg;
+            transition: translate 0.3s 0.3s,
+                        rotate 0.3s 0s;
+        }
+        #menu-switch:checked + .group-list .hamburger span:nth-child(1){
+            translate: 0px 0px;
+            rotate: 45deg;
+            transition: translate 0.3s 0.3s,
+                        rotate 0.3s 0.6s;
+        }
+        #menu-switch:checked + .group-list .hamburger span:nth-child(2){
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        #menu-switch:checked + .group-list .hamburger span:nth-child(3){
+            translate: 0px 0px;
+            rotate: -45deg;
+            transition: translate 0.3s 0.3s,
+                        rotate 0.3s 0.6s;
+        }
+        .backdrop{
+            position: absolute;
+            right: 0;
+            top: 100%;
+            width: 0%;
+            height: 0;
+            opacity: 0;
+            background-color: #0008;
+            transition: opacity 1s, 
+                        width 0s 1s, 
+                        height 0s 1s;
+        }
+        #menu-switch:checked + .group-list .backdrop{
+            right: 0;
+            top: 100%;
+            width: 100%;
+            height: calc(100vh - 60px);
+            opacity: 1;
+            transition: opacity 1s;
+        }
+    }
+    @media screen and (min-width: 1115px) {
+        .hamburger{
+            display: none;
+        }
+    }
+    #menu-switch{
+            display: none;
+    }
+    body{
+        background-color: #F3F5F2;
+        font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+        margin: 0 auto;
+        /* overflow-x: hidden; */
+        font-weight: 300;
+        line-height: 35px;
+        letter-spacing: 2px;
+    }
+    img{
+        vertical-align: middle;
+    }
+    a{
+        text-decoration: none;
+    }
+    header{
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: #FFF; 
+    }
+    .header-group{
+        margin: auto;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .group-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+    .header-logo{
+        width: 367px;
+        margin: 20px;
+    }
+    .header-list a{
+        color: #000;
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+    .fa-user{
+        color: #000;
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- <input type="checkbox" name="" id="menu-switch"> -->
+    <header>
+        <div class="header-group">
+            <div class="header-logo">
+                <a href="front page.html"><img src="../material/LOGO row.svg" alt=""></a>
+            </div>
+            <input type="checkbox" name="" id="menu-switch">
+            <div class="group-list">
+                <nav class="header-list">
+                    <a href="product.html">精選單品</a>
+                    <a href="customized.html">專屬訂製</a>
+                    <a href="guide.html">選購指南</a>
+                    <a href="inspiration.html">來點靈感</a>
+                    <a href="reservation.html">與您有約</a>
+                </nav>
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+                <div class="hamburger">
+                    <label for="menu-switch">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                <label for="menu-switch" class="backdrop"></label>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
